@@ -1,0 +1,220 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url('../styles/Cathedral-9Ydly.ttf');
+}
+p{
+  font-family: myFirstFont;
+  font-size: 2vw;
+  color:white;
+}
+body{
+  background-color: rgb(40, 37, 37);
+}
+
+#sloganHeader{
+  color:white;
+  font-weight:bold;
+  font-family: myFirstFont;
+  margin-top: 1%;
+}
+
+#status{
+  color: white;
+  font-size: 20px;
+}
+
+input,textarea{
+ margin:0;
+ font-family:inherit;
+ font-size:inherit;
+ line-height:inherit;
+}
+input{
+ overflow:visible;
+}
+
+.form-control::placeholder{
+ color:#6c757d;
+ opacity:1;
+}
+
+.form-group{
+ margin-bottom:1rem;
+}
+
+h3{
+ line-height:1.5;
+ font-weight:400;
+ font-family:"Poppins", Arial, sans-serif;
+ color:#000;
+}
+
+.form-control{
+ height:52px;
+ background:transparent;
+ color:rgba(255, 255, 255, 0.8)!important;
+ font-size:14px;
+ border-radius:0px;
+ -webkit-box-shadow:none!important;
+ box-shadow:none!important;
+ border:1px solid rgba(255, 255, 255, 0.2);
+}
+.form-control:focus,.form-control:active{
+ background:transparent;
+ border-color:rgba(255, 255, 255, 0.5)!important;
+}
+textarea.form-control{
+ height:inherit!important;
+}
+
+.wrapper{
+ width:100%;
+ overflow:hidden;
+ border-radius:10px;
+ -webkit-box-shadow:0px 21px 41px -13px rgba(0, 0, 0, 0.18);
+ -moz-box-shadow:0px 21px 41px -13px rgba(0, 0, 0, 0.18);
+ box-shadow:0px 21px 41px -13px rgba(0, 0, 0, 0.18);
+ background:#232529;
+}
+.contact-wrap{
+ background:#272a34;
+}
+.contact-wrap h3{
+ color:#fff;
+}
+
+.btn{
+ padding:12px 16px;
+ cursor:pointer;
+ border-width:1px;
+ border-radius:2px;
+ font-size:14px;
+ font-weight:400;
+ -webkit-box-shadow:0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+ -moz-box-shadow:0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+ box-shadow:0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+ position:relative;
+ -webkit-transition:0.3s;
+ -o-transition:0.3s;
+ transition:0.3s;
+}
+@media (prefers-reduced-motion: reduce){
+  .btn{
+     -webkit-transition:none;
+     -o-transition:none;
+     transition:none;
+ }
+}
+
+.btn.btn-primary{
+ background:#f39422!important;
+ border-color:#f39422!important;
+ color:#fff;
+}
+
+.btn.btn-primary:hover,.btn.btn-primary:focus{
+ border-color:#d67a0c!important;
+ background:#d67a0c!important;
+}
+
+.contactForm .form-control{
+ border:none;
+ border-bottom:1px solid rgba(255, 255, 255, 0.2);
+ padding:0;
+}
+
+#contactForm .form-control{
+ font-size:16px;
+}
+
+#message{
+ resize:vertical;
+}
+
+#form-message-warning,#form-message-success{
+ display:none;
+}
+
+#form-message-warning{
+ color:red;
+}
+
+#form-message-success{
+ color:#28a745;
+ font-size:18px;
+ font-weight:500;
+}
+
+.submitting{
+ float:left;
+ width:100%;
+ padding:10px 0;
+ display:none;
+ font-size:16px;
+ font-weight:500;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.btn-file-upload {
+  float: right;
+  background: rgb(165, 60, 0);
+  color:#fff;
+  padding:12px 16px;
+  cursor:pointer;
+  border-width:1px;
+  border-radius:2px;
+  font-size:15px;
+  font-weight:400;
+  -webkit-box-shadow:0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow:0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+  box-shadow:0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+  position:relative;
+  -webkit-transition:0.3s;
+  -o-transition:0.3s;
+  transition:0.3s;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .btn-file-upload{
+     -webkit-transition:none;
+     -o-transition:none;
+     transition:none;
+ }
+}
+
+.btn-file-upload:hover,.btn-file-upload:focus{
+  border-color: rgb(122, 45, 0);
+  background: rgb(122, 45, 0);
+ }
+
+ #requiredInfo{
+  font-size: 20px;
+ }
+
+ #printExplain{
+  width: 65%;
+  margin: auto;
+  font-size: medium;
+  white-space: nowrap;
+ }
+
+
+/*! CSS Used fontfaces */
+@font-face{
+ font-family:"Font Awesome 6 Free";
+ font-style:normal;
+ font-weight:400;
+ font-display:block;
+ src:url(https://ka-f.fontawesome.com/releases/v6.2.1/webfonts/free-fa-regular-400.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v6.2.1/webfonts/free-fa-regular-400.ttf) format("truetype");
+}
+
+@font-face{
+  font-family:'Roboto';
+  font-style:normal;
+  font-weight:700;
+  src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format('woff2');
+  unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+ }

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link rel="stylesheet" href="./styles/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/4a37c8e350.js" crossorigin="anonymous"></script>
+</head>  
+
+<body>
+<nav class="navbar navbar-expand navbar-dark bg-black">
+    <div class="container-fluid" style="font-size: large;">
+        <a class="navbar-brand px-2" href="./index.html">
+        <img src="./images/3d-printer.png" alt="" width="35" height="35">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item px-2">
+            <a class="nav-link" href="./print.html">Print</a>
+            </li>
+            <li class="nav-item px-2">
+            <a class="nav-link" href="./modeling.html">Design</a>
+            </li>
+            <li class="nav-item px-2">
+            <a class="nav-link" href="./products.html">Products</a>
+            </li>
+        </ul>
+        </div>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="./cart.html">
+                    <span>
+                        <i class="fas fa-shopping-cart fa-lg" style="color: white;"></i>
+                        <span class="translate-middle badge rounded-pill badge-notification bg-warning text-dark" id="cart-counter" style="visibility:hidden;">0</span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+      
+<br>
+
+<div class="greetings">
+    <div id="g1">
+        <p1>Welcome to 3D Workshop!</p>
+        <p2>Here's what we can do</p>
+    </div>
+    <div class="popuptext">
+        <p>Bring digital objects to life with help of 3D-printing!</p>
+        <p>Represented images are 3D-models and their prints</p>
+    </div>
+    <div class="popup" onclick="pop()">
+        <i class="fa-solid fa-circle-question"></i>
+    </div>
+</div>
+
+<div class="main-container">
+    <input type="range" min="1" max="100" value="50" class="slider" id="slider" onclick="hidehint()">
+    <div class="imgcontainer">
+        <div class="background"><img id = "backgroundimg" class ="picture" src="./images/witcher-metall.jpg"></div>
+        <div class="foreground"><img id = "foregroundimg" class ="picture" src="./images/witcher-render.jpg"></div>
+        <div id="dragme">
+            <p>Drag me!</p>
+            <i class="fa-solid fa-arrows-left-right-to-line"></i>
+        </div>
+    </div>
+    <div class="left-picture">
+        <img id = "leftimg" class ="picture2" src="./images/rebecca-render.jpg">
+        <a class="prev" onclick="changeSlide(-1)">&#10096;</a>
+    </div>
+    <div class="right-picture">
+        <img id = "rightimg" class ="picture2" src="./images/annie-render.jpg">
+        <a class="next" onclick="changeSlide(+1)">&#10097;</a>
+    </div>
+</div>  
+
+<br>
+
+<div class = "info">
+    <p>With us you can 3D-print your model in different materials (plastic, metall, resin, wood)</p>
+    <p>Browse <a id="infolink" href="products.html">avaliable models</a> or make custom one with our team</p>
+</div>
+
+<br>
+
+<div class="promo-container">
+    <div class="order-promo-text">
+        <a href="print.html">
+            <img id = "order-promo-print" src="./images/castle-print.png">
+        </a>
+        <i class="fa-solid fa-gears"></i> Order 3D-printing
+    </div>
+    <div class="order-promo-text">
+        <a href = "modeling.html">
+            <img id = "order-promo-model" src="./images/castle-render.png">
+        </a>
+        <i class="fa-solid fa-cubes"></i> Order 3D-modeling
+    </div>
+</div>
+
+<br>
+
+<div class = "social">
+    <p>
+        Subscribe for 20% discount!
+    </p>
+
+    <a class="social-button" href="https://instagram.com">
+        <i class="fa-brands fa-instagram" id ="secret"></i>
+    </a>
+
+    <a class="social-button" href="https://twitch.com/">
+        <i class="fa-brands fa-twitch"></i>
+    </a>
+
+    <a class="social-button" href="https://t.me/ayengar">
+            <i class="fa-brands fa-telegram"></i>
+    </a>
+    
+    <a class="social-button" href="https://github.com/Ayengar">
+        <i class="fa-brands fa-github"></i>
+    </a>
+</div>
+
+<br>
+
+<div>
+    <img src="./images/BANNER-GOOD.svg">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+
+<script src="./scripts/coockie-handler.js"></script>
+<script src="./scripts/carousel.js"></script>
+
+</html>

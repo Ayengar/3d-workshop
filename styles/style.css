@@ -1,0 +1,294 @@
+body {
+  background-color: rgb(40, 37, 37);
+}
+
+a{
+text-decoration: none;
+}
+
+@font-face {
+font-family: myFirstFont;
+src: url('../styles/Cathedral-9Ydly.ttf');
+}
+
+.greetings{
+display: flex;
+gap: 20px;
+width: 100%;
+height: auto;
+margin-top: 1%;
+}
+
+#g1 {
+line-height: 25%;
+}
+
+p1 {
+  color: #e2dddd;
+  font-size: 3vw;
+  font-family: myFirstFont;
+}
+
+p2 {
+font-size: 2vw;
+}
+
+#dragme{
+color: #e2dddd;
+font-size: 2vw;
+z-index: 3;
+width: 600px;
+height: 10px;
+text-align:center;
+top: 0;
+font-family: myFirstFont;
+line-height: 0.5vw;
+visibility: hidden;
+}
+
+.popup {
+opacity: 70%;
+display: inline-block;
+cursor: pointer;
+color: rgb(144, 104, 237);
+font-size: 37px;
+}
+
+.popup:hover{
+opacity: 100%;
+}
+
+.popuptext{
+  display: grid;
+  align-content: center;
+  width: auto;
+  height: auto;
+  background-color: #c8912c6c;
+  color: #e2dddd;
+  font-size: 1.74vw;
+  font-family: myFirstFont;
+  line-height: 25%;
+  visibility:hidden;
+}
+
+.picture {
+  width: 600px;
+  height: 600px;
+  object-fit: contain;
+}
+
+.picture2{
+  width: 520px;
+  height: 520px;
+  object-fit: contain;
+  object-position: -100px;
+  z-index: 1;
+  grid-column: 1/1;
+  grid-row: 1/1;
+}
+
+.main-container{
+width: 1220px;
+height: 620px;
+margin: auto;
+display: grid;
+grid-auto-flow: column;
+gap: 0px;
+align-items: center;
+justify-items: center;
+}
+
+.left-picture, .right-picture {
+display: grid;
+grid-auto-flow: column;
+grid-template: 1fr / 1fr;
+align-items: center;
+justify-items: center;
+}
+
+.left-picture {
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+background-color: black;
+width: 300px;
+height: 542px;
+overflow: hidden;
+box-sizing:border-box;
+grid-column-start: 1;
+grid-column-end: 2;
+
+}
+
+.right-picture{
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+grid-column-start:3;
+grid-column-end: 4;
+background-color: black;
+width: 300px;
+height: 542px;
+overflow: hidden;
+box-sizing:border-box;
+
+}
+
+.imgcontainer {
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+grid-column-start: 2;
+grid-column-end: 3;
+box-sizing:border-box;
+background-color: black;
+width: 600px;
+height: 600px;
+display: grid;
+grid-template: 1fr / 1fr;
+justify-items:first baseline;
+}
+
+.imgcontainer > * {
+grid-column: 1/1;
+grid-row: 1/1;
+}
+
+.background {z-index: 1;}
+.foreground {
+z-index: 2;
+overflow: hidden;
+width: 300px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 2;
+  padding: 32px;
+  grid-column: 1/1;
+  grid-row: 1/1;
+}
+
+.prev{
+  justify-self: left;
+}
+
+.prev:hover, .next:hover {
+  background-color:#c8912c46;
+}
+
+input[type=range] {
+background: #00000000;
+} 
+
+.slider{
+z-index: 3;
+width: 600px;
+height: 600px;
+position: absolute;
+-webkit-appearance: none;
+appearance: none;
+}
+
+.slider::-webkit-slider-thumb{
+-webkit-appearance: none;
+    appearance: none;
+    width: 6px;
+    height: 600px;
+    background: rgb(40, 37, 37);
+    cursor: pointer;
+}
+
+.info{
+display: block;
+margin:auto;
+width: 100%;
+height: auto;
+color: #e2dddd;
+font-size: 1.9vw;
+text-align:center;
+font-family: myFirstFont;
+line-height: 100%;
+}
+
+#infolink {
+color: #c8912c;
+text-decoration: none;
+font-weight: bold;
+}
+
+.promo-container{
+width: 100%;
+height: auto;
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+margin-bottom:5%;
+}
+
+.order-promo-text{
+display: inline-block;
+font-size: 2vw;
+font-family: myFirstFont;
+color: #dfac3c;
+width: 300px;
+height: auto;  
+text-align: center;
+}
+
+#order-promo-print, #order-promo-model {
+width: 300px;
+height: 300px;  
+border: 1px solid transparent;
+}
+
+#order-promo-print:hover, #order-promo-model:hover{
+border: 1px solid #c8912c;
+color: #c8912c;
+}
+
+#discount{
+display: flex;
+align-items: center;
+width: 100%;
+height: auto;
+background-color: rgb(118, 113, 113);
+color: white;
+font-size: 2.1vw;
+gap:50%;
+text-align: center;
+font-family: myFirstFont;
+margin-bottom: 5%;
+}
+
+#sale-link{
+background-color: #c8912c;
+text-decoration: none;
+width: 150px;
+color: white;
+}
+
+.social{
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+width:80%;
+color: black;
+font-size: 2.7vw;
+text-align:center;
+font-family: myFirstFont;
+}
+
+.social-button{
+color:black;
+}
+
+.social-button:hover{
+color: #c8912c;
+}
+
+#secret:hover{
+color: rgb(144, 104, 237) ;
+}

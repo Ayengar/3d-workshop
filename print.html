@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://releases.transloadit.com/uppy/v3.3.1/uppy.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/4a37c8e350.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./styles/style-clean.css">
+</head>
+
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<nav class="navbar navbar-expand navbar-dark bg-black">
+  <div class="container-fluid" style="font-size: large;">
+    <a class="navbar-brand px-2" href="./index.html">
+      <img src="./images/3d-printer.png" alt="" width="35" height="35">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item px-2">
+          <a class="nav-link" href="./print.html">Print</a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" href="./modeling.html">Design</a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" href="./products.html">Products</a>
+        </li>
+      </ul>
+    </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+        <a class="nav-link" href="./cart.html">
+          <span>
+              <i class="fas fa-shopping-cart fa-lg" style="color: white;"></i>
+              <span class="translate-middle badge rounded-pill badge-notification bg-warning text-dark" id="cart-counter" style="visibility:hidden;">0</span>
+          </span>
+        </a>
+        </li>
+      </ul>
+  </div>
+</nav>
+
+<br>
+
+<div class="row text-center" id="printExplain">
+  <div class="col">
+      <p>Load 3D-model →</p>
+      <img class="img-fluid" src="./images/david-render.jpeg">
+  </div>
+  <div class="col">
+      <p>Find out the price →</p>
+      <img class="img-fluid" src="./images/calculator-pig.JPG"> 
+  </div>
+  <div class="col">
+      <p>Get your print!</p>
+      <img class="img-fluid" src="./images/inprogress.gif">
+  </div>    
+</div>
+
+<br>
+
+<div class="container" style="width: 80%;">
+  <div class="row justify-content-center">
+    <div class="col">
+      <div class="wrapper">
+        <div class="row g-0">
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="contact-wrap w-100 p-md-5 p-4 py-5">
+              <h3 class="mb-4">Request 3D-printing</h3>
+              <div id="form-message-warning" class="mb-4"></div> 
+              <div id="form-message-success" class="mb-4">
+                Your message was sent, thank you!
+              </div>
+              <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                    </div>
+                  </div>
+                  <div class="col-md-12"> 
+                    <div class="form-group">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <textarea name="message" class="form-control" id="message" cols="30" rows="6" placeholder="Message"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="submit" value="Send Message" class="btn btn-primary">
+                      <div class="submitting"></div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div id="drag-drop-area"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<script type="module">
+import {Uppy, Dashboard, Tus} from "https://releases.transloadit.com/uppy/v3.3.1/uppy.min.mjs"
+var uppy = new Uppy()
+  .use(Dashboard, {
+    inline: true,
+    target: "#drag-drop-area",
+    theme: "dark"
+  })
+  .use(Tus, {endpoint: "https://tusd.tusdemo.net/files/"})
+
+  uppy.on("complete", (result) => {
+    console.log("Upload complete! We've uploaded these files:", result.successful)
+    
+  })
+</script>
+</body>
+
+<script src="./scripts/coockie-handler.js"></script>
+
+</html>

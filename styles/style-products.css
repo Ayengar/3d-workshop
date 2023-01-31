@@ -1,0 +1,87 @@
+body {
+  background-color: rgb(40, 37, 37);
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url('../styles/Cathedral-9Ydly.ttf');
+}
+
+  .products-container{
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    gap:1%;
+  }
+
+  .product{
+    font-family: myFirstFont;
+    font-size: 2vw;
+    display:grid;
+    grid-template: auto 1fr / auto 1fr auto;
+    width:100%;
+    color:white;
+  }
+
+  .content{
+    grid-column:1;
+    grid-row:1;
+    display: grid;
+  }
+
+  .content i{
+    color: white;
+    grid-column:1;
+    grid-row:1;
+    z-index: 2;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .content img{
+    width:100%;
+    object-fit: contain;
+    grid-column:1;
+    grid-row:1;
+    z-index: 1;
+  }
+  
+  .content button{
+    width: 60%;
+    height: 10%;
+    background-color: black;
+    opacity: 70%;
+    grid-column:1;
+    grid-row:1;
+    z-index: 2;
+    align-self: flex-end;
+    justify-self: right;
+    font-size: 2vw;
+    color: white;
+    border: 1px solid transparent;
+    white-space: nowrap;
+  }
+  .content button:hover{
+    opacity: 100%;
+  }
+  
+  .text{
+    grid-column:1;
+    grid-row:2;
+    display: grid;
+  }
+
+  p1{
+    grid-column:1;
+    grid-row:1;
+    font-size: 2vw;
+  }
+
+  p2{
+    grid-column:1;
+    grid-row:2;
+    font-size: 1.5vw;
+    align-self: flex-end;
+  }
+  
+
+  
